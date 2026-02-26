@@ -1,0 +1,10 @@
+.text{
+ font-size: 4rem;
+list-style-type: none;
+}
+.btn{
+    font-size: 3rem;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+}

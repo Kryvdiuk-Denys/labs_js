@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task-3</title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
+        voluptate rerum eligendi eveniet autem consequuntur, sit molestias
+        accusantium quas et nostrum, id officia officiis voluptatibus ab.
+        Quibusdam at quia consequuntur. Ratione sit ipsam officiis reprehenderit
+        sint amet quae dolores quia dignissimos necessitatibus fugit, nam
+        laborum? Quidem recusandae placeat illo, aliquam laboriosam, culpa minus
+        amet iusto earum sequi totam nam repellendus. Corporis fugiat iusto
+        ipsam tempora ratione facilis quo cum, officia libero repellat rerum
+        quas esse accusamus repellendus quae facere aut natus ullam quos aliquid
+        incidunt eum. Veniam illum sint nobis! Magnam vitae qui dicta minus
+        nulla illum similique natus placeat sit adipisci aliquid, dolores, vero
+        explicabo quibusdam alias pariatur nesciunt voluptas blanditiis sunt
+        deserunt suscipit repudiandae! Pariatur hic porro natus! Ducimus sequi
+        eaque quasi eligendi sint! Et illo quisquam repellendus quasi? Obcaecati
+        repudiandae minus dolorum eum sit ut vel omnis veniam quidem? Modi
+        corrupti fugiat, perspiciatis blanditiis odit in sit.
+      </h1>
+      <div class="container">
+        <h1>Billing address</h1>
+        <div class="chackout">
+          <form onsubmit="alert('Форма надіслана!'); return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" placeholder="" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="user-name">Email (Optional)</label>
+                <input
+                  type="email"
+                  id="user-name"
+                  placeholder="youradres@com.ua"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="email" id="address" placeholder="1234 Main St" />
+              </div>
+            </div>
+
+            <div class="form-row line">
+              <div class="form-group">
+                <label for="state">State</label>
+                <select name="continent" id="state">
+                  <option value="">China</option>
+                  <option value="">Britain</option>
+                  <option selected value="">Ukraine</option>
+                  <option value="">USA</option>
+                  <option value="">Italy</option>
+                  <option value="">France</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <select name="continent" id="city">
+                  <option value="">Ivano-Frankivsk</option>
+                  <option value="">Kyiv</option>
+                  <option selected value="">Chernivtsi</option>
+                  <option value="">Lviv</option>
+                  <option value="">Odesa</option>
+                  <option value="">Zhytomyr</option>
+                  <option value="">Ternopil</option>
+                  <option value="">Zaporozhye</option>
+                  <option value="">Kharkiv</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="index">Index</label>
+                <input type="text" id="index" placeholder="" />
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  id="payment1"
+                  name="payment1"
+                  value="Credit"
+                  class="square-check"
+                />
+                <label for="payment1" class="square-label"
+                  >Shipping address is the same as my billing address</label
+                ><br />
+
+                <input
+                  type="checkbox"
+                  id="payment2"
+                  name="payment2"
+                  value="Debit"
+                  class="square-check"
+                />
+                <label for="payment2" class="square-label"
+                  >Save this information for next time</label
+                ><br />
+              </div>
+            </div>
+
+            <h1>Payment</h1>
+
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="vehicle1"
+                name="vehicle"
+                value="Bike"
+                class="circle-radio"
+              />
+              <label for="vehicle1" class="circle-label">Credit card</label
+              ><br />
+
+              <input
+                type="radio"
+                id="vehicle2"
+                name="vehicle"
+                value="Car"
+                class="circle-radio"
+              />
+              <label for="vehicle2" class="circle-label">Debit card</label
+              ><br />
+
+              <input
+                type="radio"
+                id="vehicle3"
+                name="vehicle"
+                value="Boat"
+                class="circle-radio"
+              />
+              <label for="vehicle3" class="circle-label">PayPal</label><br />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="card">Name on card</label>
+                <input type="text" id="card" placeholder="" />
+                <p class="signature_for_card">Full name as displayed on card</p>
+              </div>
+              <div class="form-group">
+                <label for="number">Credit card number</label>
+                <input type="text" id="number" placeholder="" />
+              </div>
+            </div>
+
+            <div class="form-row half">
+              <div class="form-group">
+                <label for="expiration">Expiration</label>
+                <input type="text" id="expiration" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="" />
+              </div>
+            </div>
+
+            <div class="button">
+              <input type="submit" value="Send form" class="btn submit-btn" />
+              <input type="reset" value="Clear form" class="btn reset-btn" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

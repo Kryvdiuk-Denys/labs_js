@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div {
+  background-color: rgb(255, 165, 0);
+  width: 500px;
+  padding: 20px;
+  color: white;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+}
+ul > li {
+  background-color: rgb(103, 158, 128);
+  padding: 0px 20px 0px 50px;
+}
+
+li > ul > li {
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgb(153, 180, 102);
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+ul li {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 40px;
+}
+span {
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+}
+.external_span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+}
+.internal_span {
+  background-color: rgb(218, 106, 32);
+}
+.li-imaged {
+  background-position: center left;
+  background-size: 20px;
+}
+.rule {
+  background-image: url("../icons/rule.png");
+}
+.phone {
+  background-image: url("../icons/ad_units.png");
+}
+.ticket {
+  background-image: url("../icons/airplane_ticket.png");
+}
+.bed {
+  background-image: url("../icons/hotel.png");
+}
+.key-car {
+  background-image: url("../icons/car_rental.png");
+}
+.bar {
+  background-image: url("../icons/local_bar.png");
+}
+.cube {
+  background-image: url("../icons/casino.png");
+}
+.museum {
+  background-image: url("../icons/museum.png");
+}
+.circus {
+  background-image: url("../icons/festival.png");
+}

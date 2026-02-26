@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="section_1"> 
+        <div class="top"> 
+<h1 class="question"> Завдання 1</h1>
+        <input class="number" type="number" placeholder="Введіть число">
+        <button class="save" id="button" role="button"> Зберегти </button>
+        </div>
+<p class="Masive">Масив: <span class="output"></span></p>
+        <div class="output"> 
+            <button class="calculate" id="button" role="button"> Обчислити Min і Max </button>
+
+           <div class="Min">
+            <p> Min   </p>
+            <p class="Min_numb">  </p>
+           </div>
+       
+           <div class="Max">
+            <p> Max  </p>
+            <span class="Max_numb"></span>
+           </div>
+<h1 class="comparison1" id="comparison"> </h1>
+<h1 class="comparison2" id="comparison"> </h1>
+
+        </div>
+    </div>
+
+
+
+
+<div class="section_1"> 
+  <h1 class="question"> Завдання 2</h1>
+  <input class="From" type="number" placeholder="Від">
+<input class="To" type="number" placeholder="До">
+
+<h2 class="Masive">Перевірка числа в діапазоні</h2>
+<div class="top">
+  <input type="number" id="numberInput" placeholder="Введи число">
+  <button onclick="checkRange()" id="button">Перевірити</button>
+  <p class="Result"></p>
+</div>
+
+  <h2 class="Masive">Зміна булевого значення (NOT)</h2>
+  <p class="Masive">Поточний стан: <span id="flagStatus">true</span></p>
+  <button onclick="toggleFlag()" class="center" id="button" >Змінити стан</button>
+
+</div>
+
+
+
+<div class="section_1"> 
+<button id="toggleBtn" onclick="toggleBtn()">Перейти до завдання з використанням ?</button>
+  <h1 class="question"> Завдання 3</h1>
+  
+  <div id="task_if"> 
+      <p class="Masive">Виконання завдання задопомогою IF</p>
+  <input class="rating" id="number" type="number" placeholder="Оцінка від 1-12">
+  <button onclick="EvaluatePoints()" id="button">Оцінити бали</button>
+   <p class="verbalFormat"></p>
+
+
+   <input class="month" id="number" type="number" placeholder="Місяць (цифрою)">
+  <button onclick="DetermineSeason()" id="button">Визначити сезон</button>
+   <p class="Season"></p>
+</div>
+
+
+
+
+<div id="task_and" style="display: none;"> 
+  <p class="Masive">Виконання завдання задопомогою ?</p>
+  <input class="rating2" id="number" type="number" placeholder="Оцінка від 1-12">
+  <button onclick="EvaluatePoints2()" id="button">Оцінити бали</button>
+   <p class="verbalFormat2"></p>
+
+
+   <input class="month2" id="number" type="number" placeholder="Місяць (цифрою)">
+  <button onclick="DetermineSeason2()" id="button">Визначити сезон</button>
+   <p class="Season2"></p>
+ 
+</div>
+
+</div>
+
+
+    <script src="ex_1.js"></script>
+    <script src="ex_2.js"></script>
+    <script src="ex_3.js"></script>
+</body>
+</html>
