@@ -80,6 +80,8 @@ switch (monthValue) {
      case 12:
     console.log ("%cГрудень","color: whitesmoke; font-size: 14px");
     break;
+    default:
+    console.log("%cНевірне значення","color: whitesmoke; font-size: 14px");
 }
 }
 
@@ -123,7 +125,7 @@ console.log(`%cСума парних чисел: ${sum}`, "color: whitesmoke; fo
 const text = document.querySelector(".text");
 
   const countVowels = str => {
-    const vowels = "aeiouаеєиіїоуюя";
+    const vowels = "аеєиіїоуюя";
     return [...str.toLowerCase()].filter(char => vowels.includes(char)).length;
   };
 
@@ -153,13 +155,10 @@ function calculatePower() {
   const exponent = parseFloat(number2.value);
 
   console.log("%cЗавдання 6", "color: white; font-size: 18px");
-
   if (isNaN(base) || isNaN(exponent)) {
-    console.log ("%cБудь ласка, введіть обидва числа.","color: whitesmoke; font-size: 14px");
-    
+    console.log ("%cБудь ласка, введіть обидва числа.","color: whitesmoke; font-size: 14px");  
     return;
   }
-
   const res = power(base, exponent);
       console.log(`%cРезультат: ${res}`, "color: whitesmoke; font-size: 14px");
 
