@@ -1,83 +1,64 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-div {
-  background-color: rgb(255, 165, 0);
-  width: 500px;
-  padding: 20px;
+  min-height: 100vh;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("undeground.jpg");
+
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
 }
-h1 {
-  font-size: 25px;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-ul {
-  list-style-type: none;
-  list-style-position: inside;
-}
-ul > li {
-  background-color: rgb(103, 158, 128);
-  padding: 0px 20px 0px 50px;
+
+.header {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #222;
 }
 
-li > ul > li {
-  font-size: 18px;
-  font-style: italic;
-  background-color: rgb(153, 180, 102);
-  margin-bottom: 10px;
-  padding-left: 40px;
+button {
+  padding: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-ul li {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 40px;
+button:hover {
+  background: #666;
 }
-span {
-  padding: 10px 20px 10px 20px;
-  display: inline-block;
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-.external_span {
-  font-size: 20px;
-  font-weight: 700;
-  background-color: rgb(199, 124, 106);
-  margin-bottom: 10px;
+
+.torch.off {
+  opacity: 0.4;
 }
-.internal_span {
-  background-color: rgb(218, 106, 32);
+
+.torch.on {
+  opacity: 1;
+  transition: 0.2s;
 }
-.li-imaged {
-  background-position: center left;
-  background-size: 20px;
+
+#handle{
+position: relative;
+top: 200px;
+left: -120px;
+opacity: 0.8;
+z-index: 1;
+width: 200px;
 }
-.rule {
-  background-image: url("../icons/rule.png");
-}
-.phone {
-  background-image: url("../icons/ad_units.png");
-}
-.ticket {
-  background-image: url("../icons/airplane_ticket.png");
-}
-.bed {
-  background-image: url("../icons/hotel.png");
-}
-.key-car {
-  background-image: url("../icons/car_rental.png");
-}
-.bar {
-  background-image: url("../icons/local_bar.png");
-}
-.cube {
-  background-image: url("../icons/casino.png");
-}
-.museum {
-  background-image: url("../icons/museum.png");
-}
-.circus {
-  background-image: url("../icons/festival.png");
+#fire{
+  position: relative;
+top: 200px;
+left:80px;
+z-index: 1;
+width: 200px;
 }

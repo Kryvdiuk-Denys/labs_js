@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab_5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="digitalСlock">
+      <div class="daysFirst">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+      <div class="daysSecond">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+
+      <div class="colon">
+        <div class="line-8 line seconds-indicator"></div>
+        <div class="line-9 line seconds-indicator"></div>
+      </div>
+
+      <div class="firstNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+      <div class="secondNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+
+      <div class="colon">
+        <div class="line-8 line seconds-indicator"></div>
+        <div class="line-9 line seconds-indicator"></div>
+      </div>
+
+      <div class="thirdNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+
+      <div class="fourthNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+
+      <div class="colon">
+        <div class="line-8 line seconds-indicator"></div>
+        <div class="line-9 line seconds-indicator"></div>
+      </div>
+
+      <div class="fifthNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+
+      <div class="sixthNumber">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+        <div class="line-4 line"></div>
+        <div class="line-5 line"></div>
+        <div class="line-6 line"></div>
+        <div class="line-7 line"></div>
+      </div>
+    </div>
+
+    <div class="calendar-controls">
+      <div class="calendar-top">
+        <label>
+          Місяць і рік:
+          <input id="monthYearInput" type="month">
+        </label>
+        <button id="showCalendar">Показати</button>
+        <div class="calendar-nav">
+          <button id="prevMonth">&#10094;</button>
+          <button id="nextMonth">&#10095;</button>
+        </div>
+      </div>
+      <div id="calendarView" class="calendar-view"></div>
+    </div>
+
+    <div class="timer-controls">
+      <label>
+        Кінець (дата + час):
+        <input id="targetDateTime" type="datetime-local">
+      </label>
+      <div class="buttons-row">
+        <button id="startCountdown">Старт зворотного відліку</button>
+        <button id="stopCountdown">Стоп</button>
+        <button id="resetClock">Скинути 00:00:00</button>
+      </div>
+      <div id="countdownStatus"></div>
+    </div>
+
+    <div class="birthday-controls">
+      <label>
+        Ваша дата народження:
+        <input id="birthdayDate" type="date">
+      </label>
+      <button id="startBirthdayCountdown">Розрахувати до наступного Дня народження</button>
+      <p id="birthdayStatus">Задайте дату і натисніть кнопку</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -128,7 +128,7 @@ const text = document.querySelector(".text");
     const vowels = "аеєиіїоуюя";
     return [...str.toLowerCase()].filter(char => vowels.includes(char)).length;
   };
-
+ 
   function calculatelater() {
       console.log("%cЗавдання 5", "color: white; font-size: 18px");
 

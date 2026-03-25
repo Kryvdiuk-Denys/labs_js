@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traffic Light</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <img class="traffic_lights" src="traffic_lights.png" alt="" width="200px">
+
+    <div class="stopSignal"></div>
+    <div class="warningSignal"></div>
+    <div class="movementSignal"></div>
+
+    <p id="status">Стан: -</p>
+
+    <div class="controls">
+      <button id="stopBtn" onclick="change()">Змінна часу</button>
+      <button id="nextBtn" onclick="skipState()">Наступний</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

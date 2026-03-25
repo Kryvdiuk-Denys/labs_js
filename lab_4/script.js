@@ -255,128 +255,158 @@ function numberPlay() {
 }
 
 //---------------------------------------------------------------------------ЗАВДАННЯ_6-------------------------------------------------------------------------------
+
 const library = [
   {
     title: "1984",
     author: "Джордж Орвелл",
     genre: "Триллер",
-    pages: "406",
-    isAvailable: "True",
+    pages: 406,
+    isAvailable: true,
   },
   {
     title: "Гордість і упередження",
     author: "Джейн Остін",
     genre: "Жахи",
-    pages: "316",
-    isAvailable: "True",
+    pages: 316,
+    isAvailable: true,
   },
   {
     title: "Володар перснів",
     author: "Джон Р.Р. Толкін",
     genre: "Фентезі",
-    pages: "1323",
-    isAvailable: "False",
+    pages: 1323,
+    isAvailable: false,
   },
   {
     title: "Великий Гетсбі",
     author: "Френсіс Скотт Фіцджеральд",
     genre: "Триллер",
-    pages: "623",
-    isAvailable: "True",
+    pages: 623,
+    isAvailable: true,
   },
   {
     title: "Маленький принц",
     author: "Антуан де Сент-Екзюпері",
     genre: "Пригоди",
-    pages: "124",
-    isAvailable: "True",
+    pages: 124,
+    isAvailable: true,
   },
 ];
 
-function startMoreFunction() {
+function libraryManagement() {
   console.clear();
+  console.log(
+    "%cЗавдання 6 - Управління бібліотекою",
+    "color: white; font-size: 18px",
+  );
 
-  console.log("%cЗавдання 6", "color: white; font-size: 18px");
-
-  console.log("%cПочатковий список книжок,", "color: white; font-size: 12px");
-  console.log([...library]);
-
-  console.log("%cДодавання нової книги,", "color: white; font-size: 12px");
-  addBook();
-  console.log([...library]);
 
   console.log(
-    "%cВидалення книги 'Великий Гетсбі',",
+    "%cДодавання книги 'Кафе на краю світу'",
     "color: white; font-size: 12px",
   );
-  removeBook();
-  console.log([...library]);
+  addBook("Кафе на краю світу", "Джон Стрелекі", "Романтика", 272);
+  console.log(library);
 
+
+  
   console.log(
-    "%cПошук книги за автором 'Джон Р.Р. Толкін',",
+    "%cВидалення книги 'Великий Гетсбі'",
     "color: white; font-size: 12px",
   );
-  findBooksByAuthor();
+  removeBook("Великий Гетсбі");
+  console.log(library);
 
-  console.log("%cЗміна статусу книги,", "color: white; font-size: 12px");
-  toggleBookAvailability();
-
+  
+  
   console.log(
-    "%cСортування книг за кількістю сторінок,",
+    "%cПошук книг автора 'Джон Р.Р. Толкін'",
+    "color: white; font-size: 12px",
+  );
+  console.log(findBooksByAuthor("Джон Р.Р. Толкін"));
+
+ 
+  
+  console.log(
+    "%cПозначення 'Маленький принц' як взятої",
+    "color: white; font-size: 12px",
+  );
+  toggleBookAvailability("Маленький принц", true);
+
+
+  
+  console.log(
+    "%cСортування за кількістю сторінок",
     "color: white; font-size: 12px",
   );
   sortBooksByPages();
   console.log(library);
 
-  console.log("%cСтатистика бібліотеки,", "color: white; font-size: 12px");
+
+  
+  console.log("%cСтатистика бібліотеки", "color: white; font-size: 12px");
   console.log(getBooksStatistics());
 }
 
-function addBook() {
+
+
+//______2_____
+function addBook(title, author, genre, pages) {
   library.unshift({
-    title: "Кафе на краю світу",
-    author: "Джон Стрелекі",
-    genre: "Романтика",
-    pages: "272",
-    isAvailable: "True",
+    title: title,
+    author: author,
+    genre: genre,
+    pages: pages,
+    isAvailable: true,
   });
 }
 
-function removeBook() {
-  let index = library.findIndex((book) => book.title === "Великий Гетсбі");
-  library.splice(index, 1);
-}
-
-function findBooksByAuthor() {
-  let findBook = library.find((item) => item.author === "Джон Р.Р. Толкін");
-  console.log(findBook);
-}
-
-function toggleBookAvailability(title, isBorrowed) {
-  let book = library.find((item) => item.title === "Маленький принц");
-
-  if (book) {
-    book.isAvailable = !isBorrowed;
-    console.log(book);
-  } else {
-    console.log("Книгу не знайдено");
+//______3_____
+function removeBook(title) {
+  let index = library.findIndex((book) => book.title === title);
+  if (index !== -1) {
+    library.splice(index, 1);
   }
 }
 
+//______4_____
+function findBooksByAuthor(author) {
+  return library.filter((book) => book.author === author);
+}
+
+//______5_____
+function toggleBookAvailability(title, isBorrowed) {
+  library.find((item) => item.title === title);
+
+   let library = numbers.map(book => {
+     if(book.title==title){
+      book.isAvailable = !isBorrowed;
+   
+    }
+return book;  
+}
+
+//______6_____
 function sortBooksByPages() {
   library.sort(function (a, b) {
-    return Number(a.pages) - Number(b.pages);
+    return a.pages - b.pages;
   });
 }
 
+//______7_____
 function getBooksStatistics() {
   const totalBooks = library.length;
 
-  const availableBooks = library.filter((book) => book.isAvailable).length;
+  const availableBooks = library.filter(
+    (book) => book.isAvailable === true,
+  ).length;
 
-  const borrowedBooks = library.filter((book) => !book.isAvailable).length;
+  const borrowedBooks = library.filter(
+    (book) => book.isAvailable === false,
+  ).length;
 
-  const totalPages = library.reduce((sum, book) => sum + Number(book.pages), 0);
+  const totalPages = library.reduce((sum, book) => sum + book.pages, 0);
 
   const averagePages = totalBooks ? totalPages / totalBooks : 0;
 
@@ -384,13 +414,15 @@ function getBooksStatistics() {
     totalBooks,
     availableBooks,
     borrowedBooks,
+    totalPages,
     averagePages,
   };
 }
+
 //---------------------------------------------------------------------------ЗАВДАННЯ_7-------------------------------------------------------------------------------
 function istudents() {
   console.clear();
-    console.log("%cЗавдання 7", "color: white; font-size: 18px");
+  console.log("%cЗавдання 7", "color: white; font-size: 18px");
   console.log(
     "%cЗавдання: Робота з об'єктом студента",
     "color: white; font-size: 18px",
