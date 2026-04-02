@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab_6 - Товари</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Список товарів</h1>
+      <div class="header__total-price" id="total-price">Загальна вартість: 0 ₴</div>
+    </header>
+
+    <main class="main">
+      <section class="controls" aria-label="Фільтр і сортування">
+        <div class="controls__filter-group" id="category-filters" aria-label="Фільтр за категорією"></div>
+        <div class="controls__sort-group" id="sort-controls" aria-label="Сортування"></div>
+      </section>
+
+      <section class="product-section">
+        <div id="product-list" class="product-list" aria-live="polite"></div>
+        <button id="add-product-btn" class="product-section__add-btn">Додати новий товар</button>
+      </section>
+    </main>
+
+    <div id="empty-message" class="empty-message">Наразі список товарів пустий. Додайте новий товар.</div>
+
+    <div id="modal-overlay" class="modal-overlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title" class="modal__title">Додати товар</h2>
+        <form id="product-form" class="form" novalidate>
+          <div class="form__row">
+            <label for="product-name" class="form__label">Назва товару*</label>
+            <input type="text" id="product-name" name="productName" class="form__input" required minlength="2" />
+          </div>
+          <div class="form__row">
+            <label for="product-price" class="form__label">Ціна товару (₴)*</label>
+            <input type="number" id="product-price" name="productPrice" class="form__input" required min="1" step="0.01" />
+          </div>
+          <div class="form__row">
+            <label for="product-category" class="form__label">Категорія*</label>
+            <select id="product-category" name="productCategory" class="form__select" required>
+              <option value="">Оберіть категорію</option>
+              <option value="Електроніка">Електроніка</option>
+              <option value="Одяг">Одяг</option>
+              <option value="Книги">Книги</option>
+              <option value="Для дому">Для дому</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label for="product-image" class="form__label">URL зображення*</label>
+            <input type="url" id="product-image" name="productImage" class="form__input" required placeholder="https://..." />
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="form__submit-btn">Зберегти</button>
+            <button type="button" class="form__cancel-btn" id="cancel-btn">Скасувати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script src="lab-6.js"></script>
+  </body>
+</html>
