@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Слайдер | Плавна карусель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-wrapper">
+        <div id="mySlider" class="slider"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const slider = new Slider('#mySlider', {
+            images: [
+                'https://picsum.photos/id/1015/800/500',
+                'https://picsum.photos/id/104/800/500',
+                'https://picsum.photos/id/106/800/500',
+                'https://picsum.photos/id/20/800/500',
+                'https://picsum.photos/id/155/800/500'
+            ],
+            duration: 600,        // швидкість анімації (мс)
+            autoplay: true,       // автоматичне прокручування
+            showArrows: true,     // показувати стрілки
+            showDots: true        // показувати пагінацію
+        });
+    </script>
+</body>
+</html>

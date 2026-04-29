@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Kanban Board</h1>
+        </header>
+
+        <div class="board">
+            <div class="column" data-status="pending">
+                <div class="column-title">To Do</div>
+                <div class="task-list" id="pendingTasks">
+                    <div class="task" draggable="true" data-id="1">Дизайн інтерфейсу</div>
+                    <div class="task" draggable="true" data-id="2">Встановити бібліотеки</div>
+                    <div class="task" draggable="true" data-id="3">Налаштувати базу даних</div>
+                </div>
+            </div>
+
+            <div class="column" data-status="inprogress">
+                <div class="column-title">In Progress</div>
+                <div class="task-list" id="inprogressTasks">
+                    <div class="task" draggable="true" data-id="4">Написати базовий код</div>
+                    <div class="task" draggable="true" data-id="5">Тестування компонентів</div>
+                </div>
+            </div>
+
+            <div class="column" data-status="review">
+                <div class="column-title">Review</div>
+                <div class="task-list" id="reviewTasks">
+                    <div class="task" draggable="true" data-id="6">Code Review</div>
+                </div>
+            </div>
+
+            <div class="column" data-status="done">
+                <div class="column-title">Done</div>
+                <div class="task-list" id="doneTasks">
+                    <div class="task" draggable="true" data-id="7">Спланувати спринт</div>
+                    <div class="task" draggable="true" data-id="8">Оновити документацію</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
