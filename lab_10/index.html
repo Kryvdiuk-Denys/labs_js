@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FriendSearch - Авторизація / Реєстрація</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="auth-container" class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">FriendSearch</p>
+        <h1>Авторизація та реєстрація</h1>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="tabs" role="tablist" aria-label="Переходи між формами">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="register">Реєстрація</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="login">Авторизація</button>
+      </div>
+
+      <form id="registerForm" class="form active" novalidate>
+        <h2>Реєстрація</h2>
+
+        <div class="form-group">
+          <label for="firstName">Ім'я</label>
+          <input id="firstName" type="text" name="firstName" autocomplete="given-name" placeholder="Введіть ім'я" required />
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Прізвище</label>
+          <input id="lastName" type="text" name="lastName" autocomplete="family-name" placeholder="Введіть прізвище" required />
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" autocomplete="email" placeholder="example@mail.com" required />
+          <small></small>
+        </div>
+
+        <div class="form-group password">
+          <label for="password">Пароль</label>
+          <span class="password-field">
+            <input id="password" type="password" name="password" autocomplete="new-password" placeholder="Мінімум 6 символів" required />
+            <button type="button" class="toggle" aria-label="Показати пароль">
+              <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </span>
+          <small></small>
+        </div>
+
+        <div class="form-group password">
+          <label for="confirmPassword">Підтвердження паролю</label>
+          <span class="password-field">
+            <input id="confirmPassword" type="password" name="confirmPassword" autocomplete="new-password" placeholder="Повторіть пароль" required />
+            <button type="button" class="toggle" aria-label="Показати підтвердження паролю">
+              <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </span>
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="+380XXXXXXXXX" required />
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Дата народження</label>
+          <input id="dob" type="date" name="dob" required />
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="sex">Стать</label>
+          <select id="sex" name="sex" required>
+            <option value="">Оберіть стать</option>
+            <option value="male">Чоловіча</option>
+            <option value="female">Жіноча</option>
+          </select>
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Країна</label>
+          <select id="country" name="country" required>
+            <option value="">Оберіть країну</option>
+          </select>
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Місто</label>
+          <select id="city" name="city" disabled required>
+            <option value="">Спершу оберіть країну</option>
+          </select>
+          <small></small>
+        </div>
+
+        <button type="submit" class="primary-btn">Зареєструватися</button>
+      </form>
+
+      <form id="loginForm" class="form" novalidate>
+        <h2>Авторизація</h2>
+
+        <div class="form-group">
+          <label for="username">Ім'я користувача або Email</label>
+          <input id="username" type="text" name="username" autocomplete="username" placeholder="Ваш логін або email" required />
+          <small></small>
+        </div>
+
+        <div class="form-group password">
+          <label for="loginPassword">Пароль</label>
+          <span class="password-field">
+            <input id="loginPassword" type="password" name="loginPassword" autocomplete="current-password" placeholder="Мінімум 6 символів" required />
+            <button type="button" class="toggle" aria-label="Показати пароль">
+              <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </span>
+          <small></small>
+        </div>
+
+        <div class="form-group checkbox">
+          <label class="checkbox-label">
+            <input class="checkboxMe" type="checkbox" name="remember" />
+            Запам'ятати мене
+          </label>
+        </div>
+
+        <button type="submit" class="primary-btn">Увійти</button>
+      </form>
+    </div>
+
+    <div id="successMessage" class="status-message" aria-live="polite"></div>
+  </div>
+ 
+
+
+
+
+
+
+  <div id="main-container" class="hidden">
+    <header>
+      <div class="header-content">
+        <h1>FriendSearch</h1>
+        <div class="user-info">
+          <span id="current-user"></span>
+          <button id="logout-btn">Вихід</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="controls">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Пошук друзів...">
+        </div>
+        <nav class="tabs">
+          <button class="tab-btn active" data-tab="all">Усі друзі</button>
+          <button class="tab-btn" data-tab="favorites">Улюблені</button>
+        </nav>
+        <div class="filter-sort-container">
+          <div class="filter-section">
+            <h3>Фільтри</h3>
+            <div class="filter-group">
+              <label for="age-range-inputs">Вік:</label>
+              <div class="range-inputs" id="age-range-inputs">
+                <input type="number" id="min-age" placeholder="Від" min="18" max="100">
+                <span>-</span>
+                <input type="number" id="max-age" placeholder="До" min="18" max="100">
+              </div>
+            </div>
+            <div class="filter-group">
+              <label for="gender-filter">Стать:</label>
+              <select id="gender-filter">
+                <option value="all">Усі</option>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="country-filter">Країна:</label>
+              <select id="country-filter">
+                <option value="all">Усі</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="email-filter">Email:</label>
+              <input type="text" id="email-filter" placeholder="Пошук по email...">
+            </div>
+          </div>
+
+          <div class="sort-section">
+            <h3>Сортування</h3>
+            <div class="sort-group">
+              <select id="sort-by">
+                <option value="name-asc">Ім'я (А-Я)</option>
+                <option value="name-desc">Ім'я (Я-А)</option>
+                <option value="age-asc">Вік (від меньше до більше)</option>
+                <option value="age-desc">Вік (від більше до менше)</option>
+                <option value="registered-asc">Дата реєстрації (найстаріші)</option>
+                <option value="registered-desc">Дата реєстрації (найновіші)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-message" class="hidden"></div>
+
+      <div id="loading-spinner" class="hidden">
+        <div class="spinner"></div>
+      </div>
+
+      <div id="user-cards-container"></div>
+
+      <div id="pagination-container">
+        <div class="pagination">
+          <button id="prev-page" class="page-nav">Попередня</button>
+          <div id="page-numbers"></div>
+          <button id="next-page" class="page-nav">Наступна</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
